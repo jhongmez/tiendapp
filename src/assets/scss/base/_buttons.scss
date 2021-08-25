@@ -1,0 +1,21 @@
+.btn {
+    border: 1px solid transparent;
+    background-color: transparent;
+    cursor: pointer;
+    text-align: center;
+    &.btn-secondary {
+        background-color: $black;
+        color: $white;
+        font-family: $robo-r;
+        font-size: 19px;
+        padding: 10px 20px 11px;
+    }
+    &.btn-outline-secondary {
+        background-color: $white;
+        border: 1px solid rgba($black, 0.5);
+        color: $black;
+        font-family: $helve-m;
+        font-size: 18px;
+        padding: 11px 20px;
+    }
+}

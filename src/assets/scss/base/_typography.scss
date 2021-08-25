@@ -1,0 +1,33 @@
+h1, h2, h3, h4, h5 {
+    margin: 0;
+}
+h1 {
+    font-family: $helve-b;
+    font-size: 3.5rem;
+}
+
+h2 {
+    font-family: $helve-b;
+    font-size: 2.75rem;
+}
+
+h3 {
+    font-family: $helve-b;
+    font-size: 2rem;
+}
+
+h4 {
+    font-family: $helve-m;
+    font-size: 1.625rem;
+}
+
+h5 {
+    font-family: $helve-r;
+    font-size: 1.25rem;
+}
+
+p,
+a,
+span {
+    font-size: 1.125rem;
+}
