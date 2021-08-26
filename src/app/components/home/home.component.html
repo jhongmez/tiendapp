@@ -29,6 +29,41 @@
 			<h3 class="products-title">
 				productos más buscados
 			</h3>
+			<ngx-slick-carousel class="carousel"
+				#slickModal="slick-carousel"
+				[config]="slideConfigProducts"
+				(init)="slickInit($event)"
+				(breakpoint)="breakpoint($event)"
+			>
+				<div
+				ngxSlickItem
+				class="card slide" 
+				*ngFor="let item of products">
+					<div class="card-header">
+						<a href="">
+							<img [src]="item.thumbnail" [alt]="item.title">
+						</a>
+					</div>
+					<div class="card-body">
+						<div class="card-body__title">
+							<h5 class="title">
+								<a href="">
+									{{ item.title }}
+								</a>
+							</h5>
+						</div>
+						<div class="card-body__pricing">
+							<span class="pricing-main">${{ item.price }}</span>
+							<span class="pricing-desc">${{ item.price }}</span>
+						</div>
+						<div class="card-body__send">
+							<a href="" class="btn btn-secondary button-add">
+								Agregar al carrito
+							</a>
+						</div>
+					</div>
+				</div>
+			</ngx-slick-carousel>
 		</div>
 	</div>
 </section>

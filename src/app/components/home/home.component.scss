@@ -71,6 +71,14 @@
     .products-title {
         text-align: center;
         text-transform: uppercase;
+        padding-bottom: 80px;
+    }
+    .slick-slide {
+	    margin: 0 26px;
+    }
+    /* the parent */
+    .slick-list {
+        margin: 0 -26px;
     }
 }
 

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ProductInterface } from 'src/app/models/product-interface';
+import { ProductService } from 'src/app/shared/services/product.service';
 
 @Component({
   selector: 'app-home',
@@ -7,18 +9,54 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
   
+  public products: any = []
+
   slides = [
     {img: "assets/img/backgrounds/banner-principal.jpg"},
     {img: "assets/img/backgrounds/banner-principal.jpg"}
   ];
+  slideConfig = {"slidesToShow": 1, "slidesToScroll": 1};
+  slideConfigProducts = {
+    "slidesToShow": 4, 
+    "slidesToScroll": 1,
+    "arrow": true,
+    "responsive": [
+      {
+        "breakpoint": 1400,
+        "settings": {
+          "slidesToShow": 3
+        }
+      },
+      {
+        "breakpoint": 1024,
+        "settings": {
+          "slidesToShow": 2
+        }
+      },
+      {
+        "breakpoint": 600,
+        "settings": {
+          "slidesToShow": 1
+        }
+      }
+    ]
+  };
   
-  constructor() { }
+  constructor(private productSvc: ProductService) { }
 
   ngOnInit(): void {
+  
+    this.listarProductos();
+
   }
 
-  slideConfig = {"slidesToShow": 1, "slidesToScroll": 1};
-  
+  listarProductos() {
+    this.productSvc.cargarProductos()
+      .subscribe( (resp: ProductInterface) => {
+        this.products = resp.results;
+      });
+  }
+
   slickInit(e) {
     console.log('slick initialized');
   }
