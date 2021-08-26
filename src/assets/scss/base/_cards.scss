@@ -15,6 +15,10 @@
     .card-body {
         background: $gray-5;
         padding: 20px 30px 31px;
+        height: 180px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
 
         &__title {
             .title {
@@ -28,7 +32,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 14px 0;
+            padding: 10px 0;
             .pricing-main {
                 color: $primary;
                 font-family: $helve-b;
@@ -54,10 +58,9 @@
         }
 
         &__send {
-            display: flex;
-            width: 100%;
-            justify-content: center;
             .button-add {
+                display: flex;
+                justify-content: center;
                 flex: 1;
             }
         }
