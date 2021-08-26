@@ -1,0 +1,78 @@
+@import 'src/styles';
+
+header {
+    position: fixed;
+    width: 100%;
+
+    .header-content {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        &__logo {
+            flex: 1;
+            img {
+                height: 95px;
+                width: 446px;
+                object-fit: contain;
+            }
+        }
+
+        &__options {
+            flex: 1;
+            .options-content {
+                display: flex;
+                flex-direction: row;
+                justify-content: flex-end;
+                align-items: center;
+
+                &__list {
+                    margin-left: 30px;
+
+                    a > .icons {
+                        height: 36px;   
+                        width: 36px;
+                        object-fit: contain;
+                    }
+                }
+            }
+
+        }
+
+    }
+    .navbar-content {
+        background-color: $black;
+        padding: 20px 0;
+
+        &__options {
+            display: flex;
+            justify-content: center;
+
+            .options-list {
+                margin-right: 80px;
+                position: relative;
+                &::before {
+                    content: '';
+                    position: absolute;
+                    right: -40px;
+                    top: 0;
+                    bottom: 0;
+                    height: 100%;
+                    width: 1px;
+                    background-color: $white;
+                }
+                &:last-child {
+                    margin-right: 0;
+                    &::before {
+                        display: none;
+                    }
+                }
+
+                &__link {
+                    color: $white;
+                    font-size: 30px;
+                }
+            }
+        }
+    }
+}

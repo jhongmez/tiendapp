@@ -1,0 +1,40 @@
+<header>
+
+    <div class="container">
+        <div class="header-content">
+            <div class="header-content__logo">
+                <img src="assets/img/logo/logo.svg" alt="">
+            </div>
+            <div class="header-content__options">
+                <ul class="options-content">
+                    <li class="options-content__list">
+                        <a href="">
+                            <img class="icons" src="assets/img/icons/icon-user.svg" alt="">
+                        </a>
+                    </li>
+                    <li class="options-content__list">
+                        <a href="">
+                            <img class="icons" src="assets/img/icons/icon-shopping.svg" alt="">
+                        </a>
+                    </li>
+                    <li class="options-content__list">
+                        <a href="" class="btn btn-outline-secondary">
+                            Iniciar sesion
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <nav class="navbar-content">
+        <ul class="navbar-content__options">
+            <li 
+            *ngFor="let option of navbarOptions"
+            class="options-list"
+            >
+                <a href="" class="options-list__link">{{ option }}</a>
+            </li>
+        </ul>
+    </nav>
+
+</header>
