@@ -1,1 +1,34 @@
-<p>home works!</p>
+<section id="hero">>
+		<ngx-slick-carousel class="carousel" 
+			#slickModal="slick-carousel" 
+			[config]="slideConfig" 
+			(init)="slickInit($event)"
+			(breakpoint)="breakpoint($event)">
+		<div ngxSlickItem *ngFor="let slide of slides" class="slide">
+			<img src="{{ slide.img }}" alt="" width="100%">
+		</div>
+		</ngx-slick-carousel>
+</section>
+
+<section id="category">
+	<div class="container">
+		<div class="category-contents">
+			<div class="category-contents__infantil">
+				<h2 class="title">moda infantil</h2>
+			</div>
+			<div class="category-contents__protection">
+				<h2 class="title">protección</h2>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section id="products">
+	<div class="container">
+		<div class="products-content">
+			<h3 class="products-title">
+				productos más buscados
+			</h3>
+		</div>
+	</div>
+</section>

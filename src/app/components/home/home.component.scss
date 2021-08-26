@@ -1,0 +1,83 @@
+@import 'src/styles';
+
+#hero {
+    padding-top: 180px;
+
+    .slick-slider {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    ::ng-deep { 
+        .slick-prev,
+        .slick-next {
+            height: 100px;
+            width: 100px;
+            background: rgba($gray-2, 0.2);
+            z-index: 100;
+        }
+        .slick-next {
+            right: 60px;
+        }
+        .slick-prev {
+            left: 60px;
+        }
+    }
+
+}
+#category {
+    padding-top: 70px;
+
+    .category-contents {
+        display: flex;
+        flex-direction: row;
+
+        .category-contents__infantil {
+            background-image: url('../../../assets/img/global/moda-infantil.png');
+        }
+        .category-contents__protection {
+            background-image: url('../../../assets/img/global/proteccion.png');
+        }
+        
+        .category-contents__infantil, .category-contents__protection {
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: cover;
+            width: 100%;
+            height: 600px;
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+            margin-right: 50px;
+            &:last-child {
+                margin-right: 0;
+            }
+
+            .title {
+                text-transform: uppercase;
+                color: $white;
+                font-family: $robo-i;
+                text-shadow: 4px 2px 5px #000000B8;
+                margin-bottom: 80px;
+            }
+
+        }
+
+    }
+}
+#products {
+    padding: 60px 0;
+
+    .products-title {
+        text-align: center;
+        text-transform: uppercase;
+    }
+}
+
+// .slick-slide {
+// 	margin: 0 26px;
+// }
+// /* the parent */
+// .slick-list {
+// 	margin: 0 -26px;
+// }
