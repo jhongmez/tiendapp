@@ -25,5 +25,9 @@ export class ProductService {
 		return this.http.get<ProductInterface>(`${this.productsAPI}`);
 	}
 
+	obtenerInfoProductos(id: string) {
+		return this.http.get<ProductInterface>(`${this.productsAPI}/${id}`);
+	}
+
 
 }
