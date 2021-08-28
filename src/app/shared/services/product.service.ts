@@ -11,22 +11,25 @@ import { ProductInterface } from '../../models/product-interface';
 })
 export class ProductService {
 	
-
 	// URL principal de la API
+	// sitio o pais
+	// categoria de productos
 	baseURL = environment.mainURL;
-	categoryId = `MCO1430`;
-	productsAPI = `${this.baseURL}/search?category=${this.categoryId}`;
+	sitio = `MCO`;
+	categoriaProducto = `MCO1430`;
+	productos = `${this.baseURL}/sites/${this.sitio}/search?category=${this.categoriaProducto}`;
+
 
 	constructor(private http: HttpClient) {
-		console.log(`productos services`);
 	}
 
 	cargarProductos() {
-		return this.http.get<ProductInterface>(`${this.productsAPI}`);
+		return this.http.get<ProductInterface>(`${this.productos}`);
 	}
 
 	obtenerInfoProductos(id: string) {
-		return this.http.get<ProductInterface>(`${this.productsAPI}/${id}`);
+		let infoProducto = `${this.baseURL}/items/${id}`;
+		return this.http.get<ProductInterface>(`${infoProducto}`);
 	}
 
 

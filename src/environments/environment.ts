@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  mainURL: `https://api.mercadolibre.com/sites/MCO`
+  mainURL: `https://api.mercadolibre.com`,
 };
 
 /*
