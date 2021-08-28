@@ -49,6 +49,9 @@ header {
     .navbar-content {
         background-color: $black;
         padding: 20px 0;
+        @media (max-width: 768px) {
+            display: none;
+        }
 
         &__options {
             display: flex;

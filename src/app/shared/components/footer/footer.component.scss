@@ -9,6 +9,9 @@ footer {
         flex-direction: row;
         justify-content: space-between;
         margin-bottom: 70px;
+        @media (max-width: 768px) {
+            flex-direction: column;
+        }
 
         &__politics, &__about,  &__follow {
             
@@ -17,10 +20,24 @@ footer {
             .follow-title {
                 color: $white;
                 margin-bottom: 34px;
+                @media (max-width: 768px) {
+                    padding: 10px 30px;
+                    border-bottom: 1px solid $white;
+                }
+            }
+
+            .follow-title {
+                @media (max-width: 768px) {
+                    border-bottom: 0;
+                    padding: 0;
+                }
             }
 
             .politics-list,
             .about-list {
+                @media (max-width: 768px) {
+                    margin-bottom: 40px;
+                }
                 li {
                     margin-bottom: 18px;
                     a {
