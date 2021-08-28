@@ -40,14 +40,14 @@
 				class="card slide" 
 				*ngFor="let item of products">
 					<div class="card-header">
-						<a href="">
+						<a [routerLink]="['/product-detail', item.id]">
 							<img [src]="item.thumbnail" [alt]="item.title">
 						</a>
 					</div>
 					<div class="card-body">
 						<div class="card-body__title">
 							<h5 class="title">
-								<a href="">
+								<a [routerLink]="['/product-detail', item.id]">
 									{{ item.title }}
 								</a>
 							</h5>

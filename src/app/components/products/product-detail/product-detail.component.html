@@ -1,0 +1,36 @@
+<section id="detail">
+    <div class="container">
+        <div class="detail-content" *ngIf="products | async as item">
+            <div class="detail-content__images">
+                <div *ngFor="let producto of item.pictures">
+                    <img 
+                    class="images-main"
+                    [src]="producto.url" 
+                    [alt]="item.title">
+                </div>
+            </div>
+            <div class="detail-content__image">
+                <img [src]="item.thumbnail" [alt]="item.title">
+            </div>
+            <div class="detail-content__description">
+                <h2 class="description-title">{{ item.title }}</h2>
+                <h3 class="description-price">${{ item.price }}</h3>
+                <button class="btn btn-secondary">
+                    Agregar a mi carrito
+                </button>
+                <div class="description-stock">
+                    <h5>Stock disponible</h5>
+                    <div class="description-stock__quantity">
+                        <p>
+                            Cantidad: 
+                            <span>{{ item.available_quantity }} unidades</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- <div *ngIf="products | async as item">
+            <img [src]="item.thumbnail" [alt]="item.title">
+        </div> -->
+    </div>
+</section>

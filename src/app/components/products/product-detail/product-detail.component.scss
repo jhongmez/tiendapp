@@ -1,0 +1,64 @@
+@import 'src/styles';
+
+#detail {
+    padding-top: 200px;
+
+    .detail-content {
+        display: flex;
+        flex-direction: row;
+        padding: 60px 0 100px;
+        @media (max-width: 1024px) {
+            flex-direction: column;
+        }
+
+        &__images{
+            margin-right: 50px;
+            @media (max-width: 1024px) {
+                display: flex;
+                flex-direction: row;
+                order: 2;
+                overflow-x: auto;
+                white-space: nowrap;
+                width: 100%;
+                margin: 20px 0;
+            }
+            .images-main {
+                border: 1px solid $gray-1;
+                width: 100px;
+                height: 100px;
+                object-fit: cover;
+                margin-bottom: 20px;
+                @media (max-width: 1024px) {
+                    margin-right: 10px;
+                }
+            }
+        }
+        &__image {
+            margin-right: 50px;
+            @media (max-width: 1024px) {
+                margin-right: 0;
+                order: 1;
+            }
+            img {
+                width: 600px;
+                height: 600px;
+                object-fit: cover;
+                @media (max-width: 1024px) {
+                    width: 100%;
+                }
+            }
+        }
+        &__description{
+            @media (max-width: 1024px) {
+                order: 3;
+            }
+            .description-price {
+                color: $primary;
+                padding: 20px 0;
+            }
+            .description-stock {
+                padding: 40px 0;
+            }
+        }
+    }
+}
