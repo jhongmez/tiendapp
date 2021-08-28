@@ -24,6 +24,18 @@
                         </li>
                     </ul>
                 </div>
+                <div class="header-content__mobile">
+                    <a (click)="toggleMenu()" class="mobile-bars">
+                        <i class="fas fa-bars fa-2x"></i>
+                    </a>
+                </div>
+                <div [@slideInOut]="menuState"  class="header-content__sidenav">
+                    <ul>
+                        <li *ngFor="let option of navbarOptions">
+                            {{ option }}
+                        </li>
+                      </ul>
+                </div>
             </div>
         </div>
     </div>
